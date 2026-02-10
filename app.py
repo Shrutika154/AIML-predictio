@@ -7,9 +7,9 @@ st.title("Vehicle Mileage Impact Prediction 🚗")
 st.write("Predict whether a vehicle has positive or negative mileage impact.")
 
 # Load models
-lr_model = jb.load("classifier/LR/mpg_lr_model.pkl")
-knn_model = jb.load("classifier/KNN/mpg_knn_model.pkl")
-scaler = jb.load("classifier/scaler.pkl")
+lr_model = jb.load("mpg_lr_model.pkl")
+knn_model = jb.load("mpg_knn_model.pkl")
+scaler = jb.load("scaler.pkl")
 
 # Model selection
 model_choice = st.selectbox(
@@ -41,3 +41,4 @@ if st.button("Predict Mileage Impact"):
         st.success("✅ Positive mileage impact (less CO₂ emission)")
     else:
         st.error("❌ Negative mileage impact (more CO₂ emission)")
+
